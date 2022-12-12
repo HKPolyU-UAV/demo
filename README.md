@@ -1,4 +1,6 @@
 CAUTION! Only tested in ubuntu 18.04
+Stable Version 12/12/2022 @pattylo
+
 
 ```
 mkdir -p xx_ws/src && cd ~/mkdir/src
