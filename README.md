@@ -2,17 +2,26 @@ in ubuntu 18.04
 
 ```
 mkdir -p xx_ws/src && cd ~/mkdir/src
-git clone https://github.com/st88018/realsense_ws.git
-cd realsense_ws
-git checkout e096a95
-change CMakelists.txt opencv 4 -> opencv 3
-sudo apt-get install ros-<ur-version>-sophus
+https://github.com/HKPolyU-UAV/demo.git
+cd demo
+sudo apt-get install ros-melodic-sophus #if not yet installed
 sudo ln -s /usr/include/eigen3/Eigen /usr/include/Eigen
-
+cd ../..
+catkin_make
+```
+To launch VICON pose feedback
+```
 roslaunch real vrpn.launch #vrpn
-roslaunch real px4.launch
+```
+To launch flight controller
+```
+roslaunch real px4.launch #change ip address if needed
+```
+Launch FSM to demo this very nice system
+```
 roslaunch real Jeremy.launch
 ```
 
 There you go!
-Got any queation, find JBL@GH034
+Kudos to Jeremy Chang
+Got any queation, please do find JBL@GH034
