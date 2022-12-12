@@ -1,0 +1,14 @@
+<launch>
+    <arg name="Force_start" default="false" />
+
+    <node name="FSM_node" pkg="demo" type="FSM" output="screen">
+            <param name="Force_start" type="bool" value="$(arg Force_start)" />
+    </node>
+
+    <node name="Failsafe_node" pkg="demo" type="Failsafe">
+    </node>
+
+    <node pkg="rosbag" type="play" name="rosbag" args="$(find demo)/bag/car.bag">
+    </node>
+
+</launch>   

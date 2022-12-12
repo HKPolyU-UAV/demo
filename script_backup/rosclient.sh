@@ -1,0 +1,4 @@
+# HP as client
+export ROS_HOSTNAME=192.168.10.196
+export ROS_MASTER_URI=http://192.168.10.188:11311
+export ROS_IP=192.168.10.196
