@@ -22,6 +22,6 @@ Launch FSM to demo this very nice system
 roslaunch real Jeremy.launch
 ```
 
-There you go!
-Kudos to Jeremy Chang
-Got any queation, please do find JBL@GH034
+There you go!</br>
+Kudos to Jeremy Chang</br>
+Got any queation, please do find JBL@GH034</br>
