@@ -54,9 +54,9 @@ deque<Vec8> Mission_generator(){
     Vec8 stage; // state x y z yaw v av waittime
     stage << 1, 0, 0, 1, 3.14, velocity_mission, velocity_angular, 10;   // state = 1; takeoff
     waypoints.push_back(stage);
-    stage << 3, 0, 0, 1, 3.14, 0, 0, 10;
+    stage << 3, 0, 0, 1, 3.14, 0, 0, 5;
     waypoints.push_back(stage);
-    stage << 7, 0, 0, 0.5, 3.14, 0, 0, 60;
+    stage << 7, 0, 0, 0.75, 3.14, 0, 0, 22;
     waypoints.push_back(stage);
     stage << 8, 0, 0, 1, 3.14, 0, 0, 120;
     waypoints.push_back(stage);

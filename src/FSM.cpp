@@ -120,7 +120,7 @@ Vec4 uav_poistion_controller_PID(Vec4 pose, Vec4 setpoint){
     Vec4 error,u_p,u_i,u_d,output,derivative;
     double iteration_time = ros::Time::now().toSec() - Last_time;
     // cout << "iteration_time: " << iteration_time << endl;
-    Vec4 K_p(2,2,1,1);
+    Vec4 K_p(2,2,1.5,1);
     Vec4 K_i(0.05,0.05,0.05,0.05);
     Vec4 K_d(0,0,0,0);
     error = setpoint-pose;
@@ -212,7 +212,7 @@ void uav_pub(bool pub_trajpose, bool pub_pidtwist){
         Vec4 xyzyaw;
         xyzyaw << UAV_pose_sub.pose.position.x,UAV_pose_sub.pose.position.y,UAV_pose_sub.pose.position.z,localrpy[2];
         if(Mission_state == 7){  //Follow the UGV
-            Vec7 UGV_pred_lp = ugv_pred_land_pose(1);
+            Vec7 UGV_pred_lp = ugv_pred_land_pose(0.6);
             Pos_setpoint << UGV_pred_lp[0],UGV_pred_lp[1],Current_stage_mission[3],UGVrpy[2];
         }
         if(Mission_state == 8){  //PID landing
@@ -220,7 +220,7 @@ void uav_pub(bool pub_trajpose, bool pub_pidtwist){
                 Mission8init = true;
                 M8start_alt = xyzyaw[2];
             }
-            Vec7 UGV_pred_lp = ugv_pred_land_pose(0.5);
+            Vec7 UGV_pred_lp = ugv_pred_land_pose(0.6);
             Pos_setpoint << UGV_pred_lp[0],UGV_pred_lp[1],M8start_alt-=0.001,UGVrpy[2];
             if( sqrt(pow((UAV_lp[0]-UGV_lp[0]),2)+pow((UAV_lp[1]-UGV_lp[1]),2)) < 0.15 && sqrt(pow((UAV_lp[2]-UGV_lp[2]),2)) < 0.1 ){
                 ShutDown = false;

@@ -20,8 +20,8 @@
 #include <message_filters/sync_policies/approximate_time.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <numeric>
-#include <eigen3/Eigen/Core>
-#include <eigen3/Eigen/Geometry>
+#include <Eigen/Core>
+#include <Eigen/Geometry>
 #include <fstream>
 #include "utils/kinetic_math.hpp"
 #include "utils/cv.hpp"
