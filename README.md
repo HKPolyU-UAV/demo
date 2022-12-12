@@ -1,4 +1,4 @@
-in ubuntu 18.04
+CAUTION! Only tested in ubuntu 18.04
 
 ```
 mkdir -p xx_ws/src && cd ~/mkdir/src
