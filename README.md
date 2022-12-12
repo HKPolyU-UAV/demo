@@ -11,15 +11,15 @@ catkin_make
 ```
 To launch VICON pose feedback
 ```
-roslaunch real vrpn.launch #vrpn
+roslaunch demo vrpn.launch #vrpn
 ```
 To launch flight controller
 ```
-roslaunch real px4.launch #change ip address if needed
+roslaunch demo px4.launch #change ip address if needed
 ```
 Launch FSM to demo this very nice system
 ```
-roslaunch real Jeremy.launch
+roslaunch demo Jeremy.launch
 ```
 
 There you go!</br>
